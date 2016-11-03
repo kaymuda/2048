@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--2048 Demo - Kelo -->
+        <scene sceneID="yXa-8g-XjY">
+            <objects>
+                <viewController storyboardIdentifier="ScreenshotDetailViewController" id="9al-LA-DqL" customClass="ScreenshotDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O0h-87-Nfz"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Vm-0H-BsF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="37a-Gp-2ov">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYw-js-VjK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="BVV-37-g7o"/>
+                                    <constraint firstAttribute="height" constant="21" id="dkg-Ka-OWg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XxX-yc-GVM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="314" id="drr-ip-m2G"/>
+                                    <constraint firstAttribute="height" constant="524" id="tjl-jz-lc1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.1019607843" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Vm-0H-BsF" firstAttribute="top" secondItem="mYw-js-VjK" secondAttribute="bottom" constant="20" id="3ky-FF-Xgf"/>
+                            <constraint firstItem="mYw-js-VjK" firstAttribute="leading" secondItem="37a-Gp-2ov" secondAttribute="leading" constant="8" id="GHP-uP-4Gd"/>
+                            <constraint firstItem="XxX-yc-GVM" firstAttribute="top" secondItem="O0h-87-Nfz" secondAttribute="bottom" constant="8" id="MMc-eb-yuo"/>
+                            <constraint firstItem="XxX-yc-GVM" firstAttribute="leading" secondItem="37a-Gp-2ov" secondAttribute="leadingMargin" constant="14" id="bch-it-jer"/>
+                            <constraint firstItem="mYw-js-VjK" firstAttribute="top" secondItem="XxX-yc-GVM" secondAttribute="bottom" constant="30" id="fAr-03-8b7"/>
+                            <constraint firstAttribute="trailing" secondItem="mYw-js-VjK" secondAttribute="trailing" constant="8" id="fPT-aU-AQT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XxX-yc-GVM" secondAttribute="trailing" constant="15" id="guv-SB-yVU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="2048 Demo - Kelo " id="Si4-GN-6Uk">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="LcL-F4-w5v"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="detailImageView" destination="XxX-yc-GVM" id="erw-DZ-FOW"/>
+                        <outlet property="detailLabel" destination="mYw-js-VjK" id="SNK-H3-1G2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6je-m9-2KD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1703.2" y="160.56971514242881"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QpB-da-pXe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Up-bj-Ai6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="RmJ-PH-jAh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.1019607843" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9al-LA-DqL" kind="relationship" relationship="rootViewController" id="Vpm-D0-e9u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u9a-xp-7FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>

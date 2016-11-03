@@ -8,6 +8,7 @@
 
 #import "M2ViewController.h"
 #import "M2SettingsViewController.h"
+#import "ScreenshotDetailViewController.h"
 
 #import "M2Scene.h"
 #import "M2GameManager.h"
@@ -69,9 +70,8 @@
                                                        queue:mainQueue
                                                   usingBlock:^(NSNotification *note) {
                                                       // executes after screenshot
-                                                      
                                                       NSLog(@"Screenshot taken");
-                                                      [self snapImage];
+                                                      [self captureSnapshotandDisplayVC];
                                                   }];
 }
 
@@ -212,16 +212,20 @@
   // Release any cached data, images, etc that aren't in use.
 }
 
--(void)snapImage
+-(void)captureSnapshotandDisplayVC
 {
     UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, 1);
     [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:YES];
     UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    UIImageView *snapshotImageView = [[UIImageView alloc] initWithImage:viewImage];
     
+    ScreenshotDetailViewController *scController = [[UIStoryboard storyboardWithName:@"SCStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ScreenshotDetailViewController"];
+    scController.screenshot = viewImage;
+    [scController configureVCWithImage:viewImage];
+    scController.modalPresentationStyle = UIModalPresentationFullScreen;
+    scController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:scController];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
-
-
-
 @end
+

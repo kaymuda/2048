@@ -34,6 +34,8 @@
 		24C4517018DFF10B0001FCFD /* M2ScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4516F18DFF10B0001FCFD /* M2ScoreView.m */; };
 		24C4517318E140AE0001FCFD /* M2SettingsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */; };
 		24C4518118E265390001FCFD /* M2Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C4518018E265390001FCFD /* M2Overlay.m */; };
+		2B6A52311DCBA2CF006494C6 /* SCStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6A52301DCBA2CF006494C6 /* SCStoryboard.storyboard */; };
+		2B6A52341DCBA5C2006494C6 /* ScreenshotDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6A52331DCBA5C2006494C6 /* ScreenshotDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2SettingsDetailViewController.m; sourceTree = "<group>"; };
 		24C4517F18E265390001FCFD /* M2Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M2Overlay.h; sourceTree = "<group>"; };
 		24C4518018E265390001FCFD /* M2Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M2Overlay.m; sourceTree = "<group>"; };
+		2B6A52301DCBA2CF006494C6 /* SCStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SCStoryboard.storyboard; path = ../../SCStoryboard.storyboard; sourceTree = "<group>"; };
+		2B6A52321DCBA5C2006494C6 /* ScreenshotDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScreenshotDetailViewController.h; path = ../View/ScreenshotDetailViewController.h; sourceTree = "<group>"; };
+		2B6A52331DCBA5C2006494C6 /* ScreenshotDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScreenshotDetailViewController.m; path = ../View/ScreenshotDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +244,8 @@
 				2443DC9F18D6647000C920C1 /* M2SettingsViewController.m */,
 				24C4517118E140AE0001FCFD /* M2SettingsDetailViewController.h */,
 				24C4517218E140AE0001FCFD /* M2SettingsDetailViewController.m */,
+				2B6A52321DCBA5C2006494C6 /* ScreenshotDetailViewController.h */,
+				2B6A52331DCBA5C2006494C6 /* ScreenshotDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -262,6 +269,7 @@
 				24C4516F18DFF10B0001FCFD /* M2ScoreView.m */,
 				24C4517F18E265390001FCFD /* M2Overlay.h */,
 				24C4518018E265390001FCFD /* M2Overlay.m */,
+				2B6A52301DCBA2CF006494C6 /* SCStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2443DC6218D662CA00C920C1 /* InfoPlist.strings in Resources */,
+				2B6A52311DCBA2CF006494C6 /* SCStoryboard.storyboard in Resources */,
 				2443DC7518D662CA00C920C1 /* Images.xcassets in Resources */,
 				2443DC6B18D662CA00C920C1 /* Main.storyboard in Resources */,
 			);
@@ -373,6 +382,7 @@
 				24C4516818DD64A90001FCFD /* M2GridView.m in Sources */,
 				2443DC9A18D663FC00C920C1 /* M2Scene.m in Sources */,
 				24C4515E18D6DC740001FCFD /* M2Grid.m in Sources */,
+				2B6A52341DCBA5C2006494C6 /* ScreenshotDetailViewController.m in Sources */,
 				24C4518118E265390001FCFD /* M2Overlay.m in Sources */,
 				2443DCAF18D6C18400C920C1 /* M2Tile.m in Sources */,
 				2443DCA018D6647000C920C1 /* M2SettingsViewController.m in Sources */,
