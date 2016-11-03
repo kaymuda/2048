@@ -26,7 +26,7 @@
     if (self.screenshot != nil){
         [self configureVCWithImage: self.screenshot];
     }
-    self.detailLabel.text = @"2048 Demo ";
+    self.detailLabel.text = @"2048 Demo";
 }
 
 - (void)viewDidLoad {
