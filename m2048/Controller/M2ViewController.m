@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad
 {
+    
   [super viewDidLoad];
   
   [self updateState];
@@ -60,6 +61,18 @@
   
   _scene = scene;
   _scene.controller = self;
+    
+    //KA - Added Observer for UIApplicationDidTakeScreenshot Notfication.
+    NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification
+                                                      object:nil
+                                                       queue:mainQueue
+                                                  usingBlock:^(NSNotification *note) {
+                                                      // executes after screenshot
+                                                      
+                                                      NSLog(@"Screenshot taken");
+                                                      [self snapImage];
+                                                  }];
 }
 
 
@@ -198,5 +211,17 @@
   [super didReceiveMemoryWarning];
   // Release any cached data, images, etc that aren't in use.
 }
+
+-(void)snapImage
+{
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, 1);
+    [self.view drawViewHierarchyInRect:self.view.bounds afterScreenUpdates:YES];
+    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIImageView *snapshotImageView = [[UIImageView alloc] initWithImage:viewImage];
+    
+}
+
+
 
 @end
